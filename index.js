@@ -3,15 +3,16 @@ const axios = require('axios');
 // getData
 async function getData() {
   // Article Url
-  const url = 'https://dev.to/dephraiim/title-loading-fdg-temp-slug-9870259';
+  const url =
+    'https://dev.to/api/articles/dephraiim/title-loading-fdg-temp-slug-9870259';
 
   // Get article data
-  const article = await axios.get(url).data;
+  const article = await axios.get(url);
 
   // Set the reaction and the id to a data object
   const data = {
-    reactionCount: article.public_reactions_count,
-    id: article.id,
+    reactionCount: article.data.public_reactions_count,
+    id: article.data.id,
   };
 
   // Return the data object
@@ -25,12 +26,12 @@ async function updatePost() {
 
   // New Title for the article
   const body = {
-    article: { title: `${reactionCount} Reactions` },
+    article: { title: `${reactionCount} Reactions!` },
   };
 
   // API Key
   const apiKey = {
-    'api-key': 'DEV_API_KEY',
+    'api-key': process.env.dev_api,
   };
 
   // Article url
