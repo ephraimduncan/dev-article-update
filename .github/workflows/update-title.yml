@@ -1,0 +1,19 @@
+name: Update Title
+
+on:
+  workflow_dispatch:
+  schedule:
+    # - cron: '*/1 * * * *' # Runs every minute
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install with npm
+        run: npm install
+      - name: Run bot
+        run: node index.js
