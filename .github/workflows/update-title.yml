@@ -1,9 +1,9 @@
 name: Update Title
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '*/1 * * * *' # Runs every minute
+    - cron: '* * * * *' Runs every minute.
+
 jobs:
   build:
     runs-on: ubuntu-latest
