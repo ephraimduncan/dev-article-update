@@ -3,8 +3,7 @@ const axios = require('axios');
 // getData
 async function getData() {
   // Article Url
-  const url =
-    'https://dev.to/api/articles/dephraiim/title-loading-fdg-temp-slug-9870259';
+  const url = 'https://dev.to/api/articles/dephraiim/title-loading-hao';
 
   // Get article data
   const article = await axios.get(url);
@@ -26,7 +25,7 @@ async function updatePost() {
 
   // New Title for the article
   const body = {
-    article: { title: `${reactionCount} Reactions!` },
+    article: { title: `${reactionCount} Reactions On This Article!` },
   };
 
   // API Key
