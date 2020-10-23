@@ -1,12 +1,9 @@
 name: Update Title
 
 on:
+  workflow_dispatch:
   schedule:
-<<<<<<< HEAD
     - cron: '*/1 * * * *' # Runs every minute
-=======
-    - cron: '* * * * *' Runs every minute.
->>>>>>> 569e0c865cea38f22e5e286888d990285ca4fe42
 
 jobs:
   build:
@@ -23,3 +20,4 @@ jobs:
         run: node index.js
         env:
           dev_api: ${{ secrets.DEV_API_KEY }}
+          # Use the Github Secrets to Store your DEV API Key
