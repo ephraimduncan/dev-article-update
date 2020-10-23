@@ -2,7 +2,11 @@ name: Update Title
 
 on:
   schedule:
+<<<<<<< HEAD
     - cron: '*/1 * * * *' # Runs every minute
+=======
+    - cron: '* * * * *' Runs every minute.
+>>>>>>> 569e0c865cea38f22e5e286888d990285ca4fe42
 
 jobs:
   build:
