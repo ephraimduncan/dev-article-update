@@ -25,7 +25,7 @@ async function updatePost() {
 
   // New Title for the article
   const body = {
-    article: { title: `${reactionCount} Reactions On This Article!` },
+    article: { title: `${reactionCount} Reactions On This Post` },
   };
 
   // API Key
